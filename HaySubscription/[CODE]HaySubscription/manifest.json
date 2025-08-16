@@ -1,0 +1,26 @@
+{
+  "$schema": "https://smapi.io/schemas/manifest.json",
+  "Author": "TechnicalityCreations",
+  "Name": "Hay Subscription",
+  "Description": "Marnie now provides a subscription service to routinely deliver hay",
+  "UniqueID": "TechnicalityCreations.HaySubscription",
+  "Version": "1.0.1",
+  "UpdateKeys": [ "Nexus:36718" ],
+  "MinimumApiVersion": "4.0.0",
+  "EntryDll": "HaySubscription.dll",
+  "MinimumGameVersion": "1.6",
+    "Dependencies": [
+    {
+      "IsRequired": true,
+      "UniqueID": "TechnicalityCreations.CPHaySubscription"
+    },
+    {
+      "IsRequired": true,
+      "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    {
+      "IsRequired": false,
+      "UniqueID": "selph.ExtraAnimalConfig"
+    }
+  ]
+}

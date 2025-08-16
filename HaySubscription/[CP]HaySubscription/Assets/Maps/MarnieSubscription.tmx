@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="2" height="3" tilewidth="16" tileheight="16" infinite="0" nextlayerid="15" nextobjectid="39">
+ <properties>
+  <property name="DayTiles" value="Front 4 2 288 Front 4 1 256 Front 15 1 256 Front 15 2 288 Front 25 1 256 Front 25 2 288 Front 25 11 256 Front 25 12 288 Back 25 4 671 Back 25 5 703 Back 15 4 228 Back 15 5 260 Back 4 4 31 Back 4 5 63 Back 25 15 226 Back 25 16 258"/>
+  <property name="Doors" value="15 12 1 120 21 13 1 120 6 12 1 120"/>
+  <property name="NightTiles" value="Front 4 2 1285 Front 4 1 1253 Front 15 1 1253 Front 15 2 1285 Front 25 1 1253 Front 25 2 1285 Front 25 11 1253 Front 25 12 1285 Back 25 4 574 Back 25 5 606 Back 15 4 199 Back 15 5 231 Back 4 4 28 Back 4 5 60 Back 25 15 294 Back 25 16 262"/>
+  <property name="Warp" value="13 20 Forest 90 16"/>
+ </properties>
+ <tileset firstgid="1" name="1" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source=".townInterior.png" width="512" height="1088"/>
+ </tileset>
+ <layer id="1" name="Back" width="2" height="3">
+  <data encoding="csv">
+1248,2086,
+1280,2085,
+1248,2085
+</data>
+ </layer>
+ <layer id="2" name="Back2" width="2" height="3">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="csv">
+0,0,
+0,0,
+0,0
+</data>
+ </layer>
+ <layer id="3" name="Back3" width="2" height="3">
+  <properties>
+   <property name="Draw" value="Back"/>
+  </properties>
+  <data encoding="csv">
+0,0,
+0,0,
+0,0
+</data>
+ </layer>
+ <layer id="4" name="Buildings" width="2" height="3">
+  <data encoding="csv">
+0,453,
+0,656,
+0,688
+</data>
+ </layer>
+ <layer id="5" name="Front" width="2" height="3">
+  <data encoding="csv">
+0,624,
+0,1610613411,
+0,0
+</data>
+ </layer>
+ <layer id="6" name="Front2" width="2" height="3">
+  <properties>
+   <property name="Draw" value="Front"/>
+  </properties>
+  <data encoding="csv">
+0,0,
+0,0,
+0,0
+</data>
+ </layer>
+ <layer id="7" name="Paths" width="2" height="3">
+  <data encoding="csv">
+0,0,
+0,0,
+0,0
+</data>
+ </layer>
+ <objectgroup id="8" name="Back"/>
+ <objectgroup id="9" name="Back2"/>
+ <objectgroup id="10" name="Back3"/>
+ <objectgroup id="11" name="Buildings">
+  <object id="26" name="TileData" x="16" y="16" width="16" height="16">
+   <properties>
+    <property name="Action" value="HaySubscription"/>
+   </properties>
+  </object>
+  <object id="36" name="TileData" x="16" y="16" width="16" height="16">
+   <properties>
+    <property name="Action" value="TechnicalityCreations.HaySubscription_HaySubscriptionBook"/>
+   </properties>
+  </object>
+  <object id="37" name="TileData" x="16" y="0" width="16" height="16">
+   <properties>
+    <property name="Action" value="TechnicalityCreations.HaySubscription_HaySubscriptionBook"/>
+   </properties>
+  </object>
+  <object id="38" name="TileData" x="16" y="32" width="16" height="16">
+   <properties>
+    <property name="Action" value="TechnicalityCreations.HaySubscription_HaySubscriptionBook"/>
+   </properties>
+  </object>
+ </objectgroup>
+ <objectgroup id="12" name="Front"/>
+ <objectgroup id="13" name="Front2"/>
+ <objectgroup id="14" name="Paths"/>
+</map>

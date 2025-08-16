@@ -1,0 +1,12 @@
+{
+  "$schema": "https://smapi.io/schemas/manifest.json",
+  "Author": "TechnicalityCreations",
+  "Name": "[CP] Hay Subscription",
+  "Description": "Content Pack for Hay Subscription",
+  "UniqueID": "TechnicalityCreations.CPHaySubscription",
+  "Version": "1.0.1",
+  "UpdateKeys": [ "Nexus:36718" ],
+  "ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  }
+}

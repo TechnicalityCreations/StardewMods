@@ -1,0 +1,14 @@
+{
+  "$schema": "https://smapi.io/schemas/i18n.json",
+  "sub-book-dialogue.question": "Looks like Marnie is offering a hay delivery service. Take out subscription?",
+  "sub-book-dialogue.yes": "Yes",
+  "sub-book-dialogue.no": "No",
+  "sub-book-dialogue.confirm": "(This will charge you automatically and refill your silos every time that they run out of hay, with a 10% markup. Confirm?)",
+  "sub-book-dialogue.cancel": "Cancel subscription?",
+  "sub-book-dialogue.cancel-confirm": "Are you sure?",
+  "sub-book-dialogue.cancel-success": "Your subscription has been cancelled",
+  "sub-book-dialogue.success": "You are now subscribed",
+  "sub-book-dialogue.not-main-player": "Only the host can subscribe to Marnie's Hay Service",
+  "sub-book-dialogue.no-silo": "Come back later when you have a silo"
+
+}
