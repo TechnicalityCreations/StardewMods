@@ -1,0 +1,40 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Format": "2.7.0",
+    "Changes": [
+        {
+            "Action": "EditMap",
+            "LogName": "Add Hay Subscription Book to AnimalShop",
+            "Target": "Maps/AnimalShop",
+            "PatchMode": "Replace",
+            "FromFile": "Assets/Maps/MarnieSubscription.tmx",
+            "FromArea":{
+                "X": 0,
+                "Y": 0,
+                "Width": 2,
+                "Height": 3
+            },
+            "ToArea":{
+                "X": 16,
+                "Y": 14,
+                "Width": 2,
+                "Height": 3
+            },
+            "When": {
+                "HasMod": "TechnicalityCreations.HaySubscription"
+            }
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "When": {
+                "HasMod": "TechnicalityCreations.HaySubscription"
+            },
+            "Entries": {
+                "MarnieHaySubscriptionDelivered": "嘿 @,^请放心，您订阅的干草已经成功送达，干草的费用也已经自动扣取 {{TechnicalityCreations.HaySubscription/LastChargedAmount}}g.^^再次感谢您的订阅,^玛妮[#]干草交货确认书",
+                "MarnieHaySubscriptionNoMoney": "嘿 @,^很遗憾，您留在我这里的账户今早提示您账户中没有足够的钱付清尾款，因此我今天无法为您配送订阅的干草。不用担心，您的订阅已经自动取消了。^^我很抱歉，期待您的下次订阅,^玛妮[#]干草订阅服务取消说明信",
+                "MarnieHaySubscriptionNoSilo": "嘿 @,^由于您似乎已经拆除了农场中的筒仓，今早我无法为您配送订阅的干草。很遗憾，者意味着您的订阅现在已经取消了。^^祝愿您一切顺利,^玛妮[#]干草订阅服务取消说明信"
+            }
+        }
+    ]
+}
