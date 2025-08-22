@@ -20,7 +20,8 @@
     },
     {
       "IsRequired": false,
-      "UniqueID": "selph.ExtraAnimalConfig"
+      "UniqueID": "selph.ExtraAnimalConfig",
+      "MinimumVersion": "4.0.9"
     }
   ]
 }
