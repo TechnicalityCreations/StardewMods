@@ -31,7 +31,7 @@
                 "HasMod": "TechnicalityCreations.HaySubscription"
             },
             "Entries": {
-                "MarnieHaySubscriptionDelivered": "{{i18n:Mail.Success}}",
+                "MarnieHaySubscriptionDelivered": "{{i18n:Mail.Success |cost={{TechnicalityCreations.HaySubscription/LastChargedAmount}} }}",
                 "MarnieHaySubscriptionNoMoney": "{{i18n:Mail.NoMoney}}",
                 "MarnieHaySubscriptionNoSilo": "{{i18n:Mail.NoSilo}}"
             }
