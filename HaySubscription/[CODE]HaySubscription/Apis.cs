@@ -1,5 +1,25 @@
 using StardewModdingAPI;
+using StardewValley;
+using StardewValley.GameData;
+namespace Selph.StardewMods.ExtraAnimalConfig
+{
+	public interface IExtraAnimalConfigApi
+	{
+		// Get a list of every modded feed that is/can be stored;
+		// the result is a dictionary of *qualified* item IDs
+		// to an IFeedInfo object that can be used to get the capacity and modify count.
+		// The IFeedInfo object is stateless so you can save it if you want.
+		public Dictionary<string, IFeedInfo> GetModdedFeedInfo();
+	}
 
+	public interface IFeedInfo
+	{
+		// The total capacity
+		public int capacity { get; }
+		// The current count
+		public int count { get; set; }
+	}
+}
 namespace GenericModConfigMenu
 {
 	/// <summary>The API which lets other mods add a config UI through Generic Mod Config Menu.</summary>

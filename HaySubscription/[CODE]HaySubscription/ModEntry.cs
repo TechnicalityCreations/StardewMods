@@ -37,7 +37,7 @@ namespace HaySubscription
 			{
 				//EACF Compat
 				HasExtraAnimalConfigFramework = helper.ModRegistry.IsLoaded("selph.ExtraAnimalConfig");
-				if(HasExtraAnimalConfigFramework) EACFApi = Helper.ModRegistry.GetApi<Selph.StardewMods.ExtraAnimalConfig.IExtraAnimalConfigApi>("selph.ExtraAnimalConfig");
+				if(HasExtraAnimalConfigFramework) EACFApi = Helper.ModRegistry.GetApi<IExtraAnimalConfigApi>("selph.ExtraAnimalConfig");
 				
 				//Content Patcher Token
 				var cpApi = Helper.ModRegistry.GetApi<IContentPatcherAPI>("Pathoschild.ContentPatcher");
