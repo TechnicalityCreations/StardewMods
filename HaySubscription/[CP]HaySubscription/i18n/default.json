@@ -1,0 +1,5 @@
+{
+    "Mail.NoSilo": "Hi @,^I tried to deliver your hay this morning, but it appears that you have removed your silo. Unfortunately, that means that your subscription has now been cancelled.^^All the best,^Marnie[#]Hay Subscription Cancellation",
+    "Mail.NoMoney": "Hi @,^Unfortunately, I couldn't deliver your hay this morning as you don't have enough money to pay for it. Your subscription has been automatically cancelled.^^Sorry,^Marnie[#]Hay Subscription Cancellation",
+    "Mail.Success": "Hi @,^Just letting you know that your hay has been delivered. You have been automatically charged {{TechnicalityCreations.HaySubscription/LastChargedAmount}}g.^^Thanks,^Marnie[#]Hay Delivery Confirmation"
+}
