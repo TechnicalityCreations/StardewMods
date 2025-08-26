@@ -9,6 +9,7 @@
   "sub-book-dialogue.cancel-success": "您的订阅已经被取消了",
   "sub-book-dialogue.success": "您成功订阅了送货服务",
   "sub-book-dialogue.not-main-player": "只有农场主才能订阅玛妮的干草配送服务",
-  "sub-book-dialogue.no-silo": "订阅干草配送服务之前，您需要有一座筒仓"
-
+  "sub-book-dialogue.no-silo": "订阅干草配送服务之前，您需要有一座筒仓",
+  "config.markup-name": "干草涨价幅度",
+  "config.markup-tooltip": "订阅干草配送服务后，干草价格的涨幅百分比。考虑到游戏平衡，比较推荐10%的涨幅度"
 }
