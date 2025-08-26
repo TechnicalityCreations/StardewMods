@@ -1,0 +1,15 @@
+{
+  "$schema": "https://smapi.io/schemas/i18n.json",
+  "sub-book-dialogue.question": "看起来玛妮有在提供干草配送服务，是否订阅",
+  "sub-book-dialogue.yes": "订阅",
+  "sub-book-dialogue.no": "不，还是算了",
+  "sub-book-dialogue.confirm": "这项服务将自动从您留下的账号中扣款，并在您的筒仓中的干草耗尽时，为您提供完整的送货补充服务，只是价格会比原价高出10%。您是否仍然愿意订阅",
+  "sub-book-dialogue.cancel": "取消订阅?",
+  "sub-book-dialogue.cancel-confirm": "您确定吗?",
+  "sub-book-dialogue.cancel-success": "您的订阅已经被取消了",
+  "sub-book-dialogue.success": "您成功订阅了送货服务",
+  "sub-book-dialogue.not-main-player": "只有农场主才能订阅玛妮的干草配送服务",
+  "sub-book-dialogue.no-silo": "订阅干草配送服务之前，您需要有一座筒仓",
+  "config.markup-name": "干草涨价幅度",
+  "config.markup-tooltip": "订阅干草配送服务后，干草价格的涨幅百分比。考虑到游戏平衡，比较推荐10%的涨幅度"
+}
