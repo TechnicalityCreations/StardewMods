@@ -12,7 +12,7 @@ namespace HaySubscription
 	public static class SubscriptionManager
 	{
 		public static int HayPrice => GetAnimalShopStockForItem(StardewValley.Object.hayID)[0].Price;
-		public static float HayMarkup => 1.1f;
+		public static float HayMarkup => ModEntry.Config.HayMarkup;
 		public static bool CanBeTriggeredByCustomFeeds => true;
 		internal static List<Feed> FeedsToRefill = new List<Feed>();
 		internal static void DoHaySubscription()

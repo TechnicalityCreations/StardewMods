@@ -9,6 +9,7 @@
   "sub-book-dialogue.cancel-success": "Your subscription has been cancelled",
   "sub-book-dialogue.success": "You are now subscribed",
   "sub-book-dialogue.not-main-player": "Only the host can subscribe to Marnie's Hay Service",
-  "sub-book-dialogue.no-silo": "Come back later when you have a silo"
-
+  "sub-book-dialogue.no-silo": "Come back later when you have a silo",
+  "config.markup-name": "Hay Markup",
+  "config.markup-tooltip": "The percentage increase to the cost of the feeds. 10% is recommended to keep it balanced"
 }
