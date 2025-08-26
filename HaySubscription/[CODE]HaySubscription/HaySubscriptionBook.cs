@@ -14,7 +14,7 @@ namespace HaySubscription
 {
 	internal static class HaySubscriptionBook
 	{
-		static ITranslationHelper Translate => ModEntry.ModHelper.Translation;
+		static ITranslationHelper Translate => ModEntry.Translation;
 		static Translation yesTranslation => Translate.Get("sub-book-dialogue.yes");
 		static Translation noTranslation => Translate.Get("sub-book-dialogue.no");
 		public static bool SubBookAction(GameLocation location, string[] actionArgs, Farmer who, Point Location)

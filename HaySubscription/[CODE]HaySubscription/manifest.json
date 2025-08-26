@@ -4,7 +4,7 @@
   "Name": "Hay Subscription",
   "Description": "Marnie now provides a subscription service to routinely deliver hay",
   "UniqueID": "TechnicalityCreations.HaySubscription",
-  "Version": "1.0.1",
+  "Version": "1.1.0",
   "UpdateKeys": [ "Nexus:36718" ],
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "HaySubscription.dll",
@@ -21,7 +21,7 @@
     {
       "IsRequired": false,
       "UniqueID": "selph.ExtraAnimalConfig",
-      "MinimumVersion": "4.0.9"
+      "MinimumVersion": "1.8.10"
     }
   ]
 }
