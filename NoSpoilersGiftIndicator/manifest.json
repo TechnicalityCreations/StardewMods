@@ -5,7 +5,7 @@
   "Description": "Bubbles appear over NPCs to show all discovered loved gifts in your inventory",
   "UniqueID": "TechnicalityCreations.NoSpoilersGiftIndicator",
   "Version": "1.0.0",
-  "UpdateKeys": [ ],
+  "UpdateKeys": [ "Nexus:37052" ],
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "NoSpoilersGiftIndicator.dll",
   "MinimumGameVersion": "1.6",
