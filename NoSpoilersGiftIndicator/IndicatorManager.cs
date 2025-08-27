@@ -17,7 +17,11 @@ namespace NoSpoilersGiftIndicator
 		public static void Update()
 		{
 			var shouldLog = ModEntry.Config.AdvancedLogging && Game1.currentGameTime.TotalGameTime.Seconds % 5 == 0;
-			if (Game1.gameMode != Game1.playingGameMode) return;
+			if (Game1.gameMode != Game1.playingGameMode)
+			{
+				if (shouldLog) Console.WriteLine("[NSGI] No Display due to not playing");
+				return;
+			}
 			if (ModEntry.Config.Toggle.IsDown())
 			{
 				if (!lastToggle)
@@ -32,9 +36,17 @@ namespace NoSpoilersGiftIndicator
 				lastToggle = false;
 			}
 			NpcGifts.Clear();
-			if (!ModEntry.Config.IsToggled) return;
+			if (!ModEntry.Config.IsToggled)
+			{
+				if (shouldLog) Console.WriteLine("[NSGI] No Display due to disabled");
+				return;
+			}
 			var player = Game1.player;
-			if(player == null) return;
+			if(player == null)
+			{
+				if (shouldLog) Console.WriteLine("[NSGI] No Display due to player being null");
+				return;
+			}
 			if (Game1.isFestival())
 			{
 				if (shouldLog) Console.WriteLine("[NSGI] No Display due to festival");
