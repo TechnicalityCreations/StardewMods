@@ -13,12 +13,23 @@ namespace NoSpoilersGiftIndicator
 	internal static class IndicatorManager
 	{
 		static Dictionary<NPC, string[]> NpcGifts = new Dictionary<NPC, string[]>();
+		static bool lastToggle = false;
 		public static void Update()
 		{
 			if (Game1.gameMode != Game1.playingGameMode) return;
+			if (ModEntry.Config.Toggle.IsDown())
+			{
+				if (!lastToggle) ModEntry.Config.IsToggled = !ModEntry.Config.IsToggled;
+				lastToggle = true;
+			}
+			else
+			{
+				lastToggle = false;
+			}
+			NpcGifts.Clear();
+			if (!ModEntry.Config.IsToggled) return;
 			var player = Game1.player;
 			if(player == null) return;
-			NpcGifts.Clear();
 			foreach(NPC npc in player.currentLocation.characters)
 			{
 				if (ModEntry.Config.OnlyShowOnBirthday && !npc.isBirthday()) continue;
@@ -29,7 +40,7 @@ namespace NoSpoilersGiftIndicator
 				if (player.friendshipData.TryGetValue(npc.Name, out Friendship value))
 				{
 					if(value == null) continue;
-					if ((value.GiftsThisWeek >= 2 && !value.IsMarried() && !value.IsRoommate() && !npc.isBirthday()) || value.GiftsToday > 0) return;
+					if (((value.GiftsThisWeek >= 2 && !value.IsMarried() && !value.IsRoommate() && !npc.isBirthday()) || value.GiftsToday > 0) && !ModEntry.Config.ShowIfMaxedOutOnGifts) return;
 					var MaxHearts = value.IsMarried() || value.IsRoommate() ? 14 : value.IsDating() ? 10 : npc.datable.Value ? 8 : 10;
 					if (((int)MathF.Floor(value.Points / NPC.friendshipPointsPerHeartLevel)) >= MaxHearts && !ModEntry.Config.ShowOnMaxHearts) continue;
 
@@ -59,8 +70,8 @@ namespace NoSpoilersGiftIndicator
 				var itemData = ItemRegistry.GetDataOrErrorItem(item);
 				var itemTexture = itemData.GetTexture();
 				var itemSourceRect = itemData.GetSourceRect();
-				Game1.spriteBatch.Draw(Game1.mouseCursors, Game1.GlobalToLocal(Game1.viewport, n.position.Value - new Vector2(-10, 85)), new Rectangle?(new Rectangle(141, 465, 20, 24)), Color.White * (ModEntry.Config.IndicatorOpacityPercent / 100f), 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
-				Game1.spriteBatch.Draw(itemTexture, Game1.GlobalToLocal(Game1.viewport, n.position.Value - new Vector2(-10, 85) + (new Vector2(20, 22))), itemSourceRect, Color.White * (ModEntry.Config.IndicatorOpacityPercent / 100f), 0f, itemSourceRect.Size.ToVector2() / 2f, 2f, SpriteEffects.None, 0f);
+				Game1.spriteBatch.Draw(Game1.mouseCursors, Game1.GlobalToLocal(Game1.viewport, n.position.Value - new Vector2(-12, 95)), new Rectangle?(new Rectangle(141, 465, 20, 24)), Color.White * (ModEntry.Config.IndicatorOpacityPercent / 100f), 0f, Vector2.Zero, 2f, SpriteEffects.None, 0f);
+				Game1.spriteBatch.Draw(itemTexture, Game1.GlobalToLocal(Game1.viewport, n.position.Value - new Vector2(-12, 95) + (new Vector2(20, 22))), itemSourceRect, Color.White * (ModEntry.Config.IndicatorOpacityPercent / 100f), 0f, itemSourceRect.Size.ToVector2() / 2f, 2f, SpriteEffects.None, 0f);
 			}
 		}
 	}

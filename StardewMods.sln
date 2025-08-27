@@ -5,6 +5,8 @@ VisualStudioVersion = 17.14.36408.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HaySubscription", "HaySubscription\[CODE]HaySubscription\HaySubscription.csproj", "{21477E32-C959-4D6E-C050-A8FAA2D3F890}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NoSpoilersGiftIndicator", "NoSpoilersGiftIndicator\NoSpoilersGiftIndicator.csproj", "{D68FE8DC-352C-4E2B-9337-DAE61B2040ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{21477E32-C959-4D6E-C050-A8FAA2D3F890}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21477E32-C959-4D6E-C050-A8FAA2D3F890}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21477E32-C959-4D6E-C050-A8FAA2D3F890}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D68FE8DC-352C-4E2B-9337-DAE61B2040ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D68FE8DC-352C-4E2B-9337-DAE61B2040ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D68FE8DC-352C-4E2B-9337-DAE61B2040ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D68FE8DC-352C-4E2B-9337-DAE61B2040ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

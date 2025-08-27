@@ -1,0 +1,14 @@
+{
+  "$schema": "https://smapi.io/schemas/i18n.json",
+  "config.opacity": "Opacity",
+  "config.opacity-tooltip": "The opacity of the gift indicators",
+  "config.birthday": "Only on birthday",
+  "config.birthday-tooltip": "Only show the gift indicator when it is the NPC's birthday",
+  "config.max-hearts": "Show on max hearts",
+  "config.max-hearts-tooltip": "Show the indicator when the NPC is on max hearts",
+  "config.max-gifts": "Show on max gifts",
+  "config.max-gifts-tooltip": "Show the indicator when the NPC is maxed out on gifts",
+  "config.liked": "Show liked gifts",
+  "config.liked-tooltip": "Show liked gifts if loved gifts are unavailable",
+  "config.toggle": "Toggle"
+}
