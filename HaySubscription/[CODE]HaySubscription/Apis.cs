@@ -9,7 +9,7 @@ namespace Selph.StardewMods.ExtraAnimalConfig
 		// the result is a dictionary of *qualified* item IDs
 		// to an IFeedInfo object that can be used to get the capacity and modify count.
 		// The IFeedInfo object is stateless so you can save it if you want.
-		public Dictionary<string, IFeedInfo> GetModdedFeedInfo();
+		public IDictionary<string, IFeedInfo> GetModdedFeedInfo();
 	}
 
 	public interface IFeedInfo

@@ -6,7 +6,7 @@ using Selph.StardewMods.ExtraAnimalConfig;
 using GenericModConfigMenu;
 namespace HaySubscription
 {
-    public sealed partial class ModEntry : Mod
+    public sealed class ModEntry : Mod
     {
 		public static ITranslationHelper Translation;
 		public static bool SubscriptionOngoing;

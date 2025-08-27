@@ -42,20 +42,25 @@ namespace HaySubscription
 			foreach (Feed f in FeedsToRefill)
 			{
 				Console.WriteLine("[HaySubscription] Trying to get data for feed " + f.Name);
-
-				//Debg Scripts
-				var ASShopStock = ShopBuilder.GetShopStock("AnimalShop");
-				if (ASShopStock == null) throw new Exception("[HaySubscription] ShopBuilder.GetShopStock(\"AnimalShop\") returned null");
-				var shopHasItem = AnimalShopHasItem(f.ItemQID);
-				if (!shopHasItem) throw new Exception($"[HaySubscription] AnimalShop Stock does not contain QID {f.ItemQID} for feed {f.Name}");
-				var shopItem = GetAnimalShopStockForItem(f.ItemQID)[0];
-				if (shopItem == null) throw new Exception($"[HaySubscription] GetAnimalShopStockForItem(f.ItemQID)[0] returned null");
-
-				var needed = f.Capacity - f.Amount;
-				int individualPrice = (int)Math.Floor(needed * f.Price * HayMarkup);
-				price += individualPrice;
-				feedString += $"\n {f.Name} TotalPrice {individualPrice}(PriceForOne {f.Price} * Needed {needed}(Capacity {f.Capacity} - Amount {f.Amount}) * Markup {HayMarkup})";
-				Console.WriteLine("[HaySubscription] Successfully got feed data for feed " + f.Name + $" capac. {f.Capacity} amount {f.Amount} price {f.Price}");
+				try
+				{
+					if (f.Amount > Game1.farmAnimalData.Count) continue;
+					var needed = f.Capacity - f.Amount;
+					int individualPrice = (int)Math.Floor(needed * f.Price * HayMarkup);
+					price += individualPrice;
+					feedString += $"\n {f.Name} TotalPrice {individualPrice}(PriceForOne {f.Price} * Needed {needed}(Capacity {f.Capacity} - Amount {f.Amount}) * Markup {HayMarkup})";
+					Console.WriteLine("[HaySubscription] Successfully got feed data for feed " + f.Name + $" capac. {f.Capacity} amount {f.Amount} price {f.Price}");
+				}
+				catch
+				{
+					//Debug Scripts
+					var ASShopStock = ShopBuilder.GetShopStock("AnimalShop");
+					if (ASShopStock == null) throw new Exception("[HaySubscription] ShopBuilder.GetShopStock(\"AnimalShop\") returned null");
+					var shopHasItem = AnimalShopHasItem(f.ItemQID);
+					if (!shopHasItem) throw new Exception($"[HaySubscription] AnimalShop Stock does not contain QID {f.ItemQID} for feed {f.Name}");
+					var shopItem = GetAnimalShopStockForItem(f.ItemQID)[0];
+					if (shopItem == null) throw new Exception($"[HaySubscription] GetAnimalShopStockForItem(f.ItemQID)[0] returned null");
+				}
 			}
 			if(Game1.player.Money >= price)
 			{
@@ -84,7 +89,7 @@ namespace HaySubscription
 				var eACFFeeds = ModEntry.EACFApi.GetModdedFeedInfo();
 				foreach(var feed in eACFFeeds)
 				{
-					var feedForList = new Feed(feed.Key, ()=>feed.Value.count = feed.Value.capacity, ()=>feed.Value.capacity, ()=>feed.Value.count, "EACF Custom Feed");
+					var feedForList = new Feed(feed.Key, ()=>feed.Value.count = feed.Value.capacity, ()=>feed.Value.capacity, ()=>feed.Value.count, "EAC Custom Feed");
 					if(feedForList.IsValid) FeedsToRefill.Add(feedForList);
 				}
 			}
