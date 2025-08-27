@@ -19,7 +19,11 @@ namespace NoSpoilersGiftIndicator
 			if (Game1.gameMode != Game1.playingGameMode) return;
 			if (ModEntry.Config.Toggle.IsDown())
 			{
-				if (!lastToggle) ModEntry.Config.IsToggled = !ModEntry.Config.IsToggled;
+				if (!lastToggle)
+				{
+					ModEntry.Config.IsToggled = !ModEntry.Config.IsToggled;
+					ModEntry.Helper.WriteConfig(ModEntry.Config);
+				}
 				lastToggle = true;
 			}
 			else

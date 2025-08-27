@@ -1,0 +1,12 @@
+{
+  "$schema": "https://smapi.io/schemas/manifest.json",
+  "Author": "TechnicalityCreations",
+  "Name": "Spoiler Free Gift Indicator",
+  "Description": "Bubbles appear over NPCs to show all discovered loved gifts in your inventory",
+  "UniqueID": "TechnicalityCreations.NoSpoilersGiftIndicator",
+  "Version": "1.0.0",
+  "UpdateKeys": [ ],
+  "MinimumApiVersion": "4.0.0",
+  "EntryDll": "NoSpoilersGiftIndicator.dll",
+  "MinimumGameVersion": "1.6",
+}

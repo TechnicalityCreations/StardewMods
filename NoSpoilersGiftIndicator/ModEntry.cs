@@ -5,9 +5,11 @@ namespace NoSpoilersGiftIndicator
 {
 	public partial class ModEntry : Mod
 	{
-		public static Config Config { get; set; }
+		internal static Config Config { get; set; }
+		internal static IModHelper Helper;
 		public override void Entry(IModHelper helper)
 		{
+			Helper = helper;
 			Config = helper.ReadConfig<Config>();
 			helper.Events.Display.RenderedWorld += (s, e) => IndicatorManager.Draw();
 			helper.Events.GameLoop.UpdateTicked += (s, e) => IndicatorManager.Update();
