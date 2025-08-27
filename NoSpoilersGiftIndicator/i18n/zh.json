@@ -1,0 +1,16 @@
+﻿{
+  "$schema": "https://smapi.io/schemas/i18n.json",
+  "config.opacity": "不透明度",
+  "config.opacity-tooltip": "礼物指示器的透明度",
+  "config.birthday": "仅在生日时显示",
+  "config.birthday-tooltip": "仅在NPC生日当天显示礼物指示器",
+  "config.max-hearts": "满好感度时显示",
+  "config.max-hearts-tooltip": "当NPC好感度达到最大值时显示指示器",
+  "config.max-gifts": "达到送礼上限时显示",
+  "config.max-gifts-tooltip": "当NPC本周收礼达到上限时显示指示器",
+  "config.liked": "显示喜欢的礼物",
+  "config.liked-tooltip": "如果没有喜爱的礼物时，显示喜欢的礼物",
+  "config.toggle": "切换开关",
+  "config.dev": "开发者模式（高级日志记录）",
+  "config.dev-tooltip": "启用更详细的日志记录，仅在模组异常时建议开启"
+}
