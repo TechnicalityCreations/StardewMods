@@ -24,6 +24,7 @@ namespace NoSpoilersGiftIndicator
 				gmcm.AddBoolOption(ModManifest, () => Config.ShowIfMaxedOutOnGifts, (v) => Config.ShowIfMaxedOutOnGifts = v, () => helper.Translation.Get("config.max-gifts"), () => helper.Translation.Get("config.max-gifts-tooltip"));
 				gmcm.AddBoolOption(ModManifest, () => Config.IncludeLikedGifts, (v) => Config.IncludeLikedGifts = v, () => helper.Translation.Get("config.liked"), () => helper.Translation.Get("config.liked-tooltip"));
 				gmcm.AddKeybindList(ModManifest, () => Config.Toggle, (v) => Config.Toggle = v, () => helper.Translation.Get("config.toggle"));
+				gmcm.AddBoolOption(ModManifest, () => Config.AdvancedLogging, (v) => Config.AdvancedLogging = v, () => helper.Translation.Get("config.dev"), () => helper.Translation.Get("config.dev-tooltip"));
 			};
 		}
 	}

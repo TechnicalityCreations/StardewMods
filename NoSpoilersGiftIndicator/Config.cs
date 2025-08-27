@@ -16,5 +16,6 @@ namespace NoSpoilersGiftIndicator
 		public bool ShowOnMaxHearts { get; set; } = false;
 		public KeybindList Toggle { get; set; } = KeybindList.Parse("RightControl");
 		public bool IsToggled = true;
+		public bool AdvancedLogging = false;
 	}
 }

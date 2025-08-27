@@ -10,5 +10,7 @@
   "config.max-gifts-tooltip": "Show the indicator when the NPC is maxed out on gifts",
   "config.liked": "Show liked gifts",
   "config.liked-tooltip": "Show liked gifts if loved gifts are unavailable",
-  "config.toggle": "Toggle"
+  "config.toggle": "Toggle",
+  "config.dev": "Dev Mode (Advanced Logging)",
+  "config.dev-tooltip": "Much more logging. Only enable if mod isn't working properly"
 }

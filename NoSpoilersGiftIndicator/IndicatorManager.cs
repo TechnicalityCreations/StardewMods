@@ -16,6 +16,7 @@ namespace NoSpoilersGiftIndicator
 		static bool lastToggle = false;
 		public static void Update()
 		{
+			var shouldLog = ModEntry.Config.AdvancedLogging && Game1.currentGameTime.TotalGameTime.Seconds % 5 == 0;
 			if (Game1.gameMode != Game1.playingGameMode) return;
 			if (ModEntry.Config.Toggle.IsDown())
 			{
@@ -34,19 +35,41 @@ namespace NoSpoilersGiftIndicator
 			if (!ModEntry.Config.IsToggled) return;
 			var player = Game1.player;
 			if(player == null) return;
-			foreach(NPC npc in player.currentLocation.characters)
+			if (Game1.isFestival())
+			{
+				if (shouldLog) Console.WriteLine("[NSGI] No Display due to festival");
+				return;
+			}
+			if (Game1.IsChatting)
+			{
+				if (shouldLog) Console.WriteLine("[NSGI] No Display due to chatting");
+				return;
+			}
+			foreach (NPC npc in player.currentLocation.characters)
 			{
 				if (ModEntry.Config.OnlyShowOnBirthday && !npc.isBirthday()) continue;
 				if (npc.IsEmoting) continue;
-				if(npc.IsInvisible) continue;
-				if(npc.isSleeping.Value) continue;
-				if(Game1.IsChatting) continue;
+				if (npc.IsInvisible) continue;
+				if (npc.isSleeping.Value) continue;
+				string issue = "";
 				if (player.friendshipData.TryGetValue(npc.Name, out Friendship value))
 				{
-					if(value == null) continue;
-					if (((value.GiftsThisWeek >= 2 && !value.IsMarried() && !value.IsRoommate() && !npc.isBirthday()) || value.GiftsToday > 0) && !ModEntry.Config.ShowIfMaxedOutOnGifts) return;
+					if (value == null)
+					{
+						issue = "Null Friendship";
+						goto Log;
+					}
+					if (((value.GiftsThisWeek >= 2 && !value.IsMarried() && !value.IsRoommate() && !npc.isBirthday()) || value.GiftsToday > 0) && !ModEntry.Config.ShowIfMaxedOutOnGifts)
+					{
+						issue = "Max Gifts";
+						goto Log;
+					}
 					var MaxHearts = value.IsMarried() || value.IsRoommate() ? 14 : value.IsDating() ? 10 : npc.datable.Value ? 8 : 10;
-					if (((int)MathF.Floor(value.Points / NPC.friendshipPointsPerHeartLevel)) >= MaxHearts && !ModEntry.Config.ShowOnMaxHearts) continue;
+					if (((int)MathF.Floor(value.Points / NPC.friendshipPointsPerHeartLevel)) >= MaxHearts && !ModEntry.Config.ShowOnMaxHearts)
+					{
+						issue = "Max Hearts";
+						goto Log;
+					}
 
 					List<string> loved = new List<string>();
 					List<string> liked = new List<string>();
@@ -54,15 +77,21 @@ namespace NoSpoilersGiftIndicator
 					// Find Gifts
 					foreach (Item i in player.Items)
 					{
-						if(i==null) continue;
-						if(!player.hasGiftTasteBeenRevealed(npc, i.ItemId)) continue;
+						if (i == null) continue;
+						if (!player.hasGiftTasteBeenRevealed(npc, i.ItemId)) continue;
 						var taste = npc.getGiftTasteForThisItem(i);
 						if (taste == NPC.gift_taste_love) loved.Add(i.QualifiedItemId);
 						else if (taste == NPC.gift_taste_like) liked.Add(i.QualifiedItemId);
 					}
 					if (loved.Count > 0) NpcGifts.Add(npc, loved.ToArray());
 					else if (liked.Count > 0 && ModEntry.Config.IncludeLikedGifts) NpcGifts.Add(npc, liked.ToArray());
+					else
+					{
+						issue = "No Gifts";
+					}
 				}
+			Log:
+				if (issue != "") if (shouldLog) Console.WriteLine("[NSGI] " + issue + " " + npc.displayName);
 			}
 		}
 		public static void Draw()
