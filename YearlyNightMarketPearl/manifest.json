@@ -1,0 +1,9 @@
+﻿{
+  "Name": "Yearly Night Market Pearl",
+  "Author": "TechnicalityCreations",
+  "Description": "Makes it so that you can recieve the pearl from the Mermaid Show once a year, instead of once a save file",
+  "UniqueID": "TechnicalityCreations.YearlyNightMarketPearl",
+  "Version": "1.0.0",
+  "EntryDll": "YearlyNightMarketPearl.dll",
+  "UpdateKeys": [ "Nexus:37558" ]
+}
