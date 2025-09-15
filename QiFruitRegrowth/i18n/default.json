@@ -1,0 +1,4 @@
+{
+    "config.RegrowTime.name": "Regrowth Days",
+    "config.RegrowTime.description": "However many days it takes for the Qi Fruit to regrow. (Default 2)"
+}

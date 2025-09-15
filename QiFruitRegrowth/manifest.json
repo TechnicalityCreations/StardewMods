@@ -1,0 +1,19 @@
+{
+    "$schema": "https://smapi.io/schemas/manifest.json",
+    "Name": "Qi Fruit Regrowth",
+    "Description": "Makes the Qi's Crop special order more bearable by making Qi Fruit have multiple harvests",
+    "Author": "TechnicalityCreations",
+    "UniqueID": "TechnicalityCreations.QiFruitRegrowth",
+    "Version": "1.0.0",
+    "ContentPackFor": {
+        "MinimumVersion": "2.8.0",
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies": [
+        {
+            "UniqueID": "Spiderbuttons.CMCT",
+            "IsRequired": true,
+            "MinimumVersion": "1.1.2"
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+{
+    "config.RegrowTime.name": "Temps pour Repousser",
+    "config.RegrowTime.description": "Combien de jours ce prendrai le fruit de Qi pour repousser"
+}

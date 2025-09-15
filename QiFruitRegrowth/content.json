@@ -1,0 +1,77 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Format": "2.8.0",
+    "Changes": [
+        {
+            "Action": "EditData",
+            "Target": "Data/Crops",
+            "Fields": {
+                "890": {
+                    "RegrowDays": "{{RegrowTime}}"
+                }
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "TileSheets/crops",
+            "FromFile": "QiCrop.png",
+            "ToArea": {
+                "X": 224,
+                "Y": 736,
+                "Width": 32,
+                "Height": 32
+            },
+            "Priority": "Late"
+        },
+        /*{
+            "Action": "EditImage",
+            "Target": "TileSheets/crops",
+            "LogName": "VanillaTweaks Compat Patch 1",
+            "FromFile": "{{Spiderbuttons.CMCT/Asset: Taiyo.VanillaTweaks.Farming, Assets/{{Spiderbuttons.CMCT/Config: Taiyo.VanillaTweaks.Farming, SaturationToggle}}/CropGrowth/QiFruitGrowth.png}}",            "ToArea": {
+                "X": 224,
+                "Y": 736,
+                "Width": 16,
+                "Height": 32
+            },
+            "FromArea": {
+                "X": 80,
+                "Y": 0,
+                "Width": 16,
+                "Height": 32
+            },
+            "Priority": "Late",
+            "When": {
+                "HasMod": "Taiyo.VanillaTweaks.Farming"
+            }
+        },
+        {
+            "Action": "EditImage",
+            "Target": "TileSheets/crops",
+            "LogName": "VanillaTweaks Compat Patch 2",
+            "FromFile": "{{Spiderbuttons.CMCT/Asset: Taiyo.VanillaTweaks.Farming, Assets/{{Spiderbuttons.CMCT/Config: Taiyo.VanillaTweaks.Farming, SaturationToggle}}/CropGrowth/QiFruitGrowth.png}}",
+            "ToArea": {
+                "X": 240,
+                "Y": 736,
+                "Width": 16,
+                "Height": 32
+            },
+            "FromArea": {
+                "X": 64,
+                "Y": 0,
+                "Width": 16,
+                "Height": 32
+            },
+            "Priority": "Late",
+            "When": {
+                "HasMod": "Taiyo.VanillaTweaks.Farming"
+            }
+        }*/
+    ],
+    "ConfigSchema": {
+        "RegrowTime": {
+            "AllowBlank": false,
+            "AllowMultiple": false,
+            "Default": 2
+        }
+    }
+}

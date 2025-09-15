@@ -1,0 +1,4 @@
+{
+    "config.RegrowTime.name": "Tiempo para Regenerarse",
+    "config.RegrowTime.description": "Cuánto dura se regenera el fruto Qi"
+}
