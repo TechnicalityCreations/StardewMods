@@ -5,15 +5,16 @@
     "Author": "TechnicalityCreations",
     "UniqueID": "TechnicalityCreations.QiFruitRegrowth",
     "Version": "1.0.0",
+    "UpdateKeys": ["Nexus:37653"],
     "ContentPackFor": {
         "MinimumVersion": "2.8.0",
         "UniqueID": "Pathoschild.ContentPatcher"
-    },
+    }/*,
     "Dependencies": [
         {
             "UniqueID": "Spiderbuttons.CMCT",
             "IsRequired": true,
             "MinimumVersion": "1.1.2"
         }
-    ]
+    ]*/
 }
