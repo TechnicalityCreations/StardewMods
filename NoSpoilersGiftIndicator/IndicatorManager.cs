@@ -16,7 +16,7 @@ namespace NoSpoilersGiftIndicator
 		static bool lastToggle = false;
 		public static void Update()
 		{
-			var shouldLog = ModEntry.Config.AdvancedLogging && Game1.currentGameTime.TotalGameTime.Seconds % 5 == 0;
+			var shouldLog = ModEntry.Config.AdvancedLogging && Game1.currentGameTime.TotalGameTime.Seconds % 120 == 0;
 			if (Game1.gameMode != Game1.playingGameMode)
 			{
 				if (shouldLog) Console.WriteLine("[NSGI] No Display due to not playing");
@@ -42,6 +42,11 @@ namespace NoSpoilersGiftIndicator
 				return;
 			}
 			var player = Game1.player;
+			if (Game1.CurrentEvent != null)
+			{
+				if (shouldLog) Console.WriteLine("[NSGI] No Display due to event");
+				return;
+			}
 			if(player == null)
 			{
 				if (shouldLog) Console.WriteLine("[NSGI] No Display due to player being null");
