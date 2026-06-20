@@ -1,0 +1,32 @@
+{
+    "$schema": "https://smapi.io/schemas/content-patcher.json",
+    "Format": "2.9.0",
+    "Changes": [
+        {
+            "Action": "Load",
+            "Target": "Mizu.Emu/EmoEmu",
+            "FromFile": "EmoEmu.png"
+        },
+        {
+            "Action": "Load",
+            "Target": "Mizu.Emu/BabyEmoEmu",
+            "FromFile": "BabyEmoEmu.png"
+        },
+        {
+            "Action": "EditData",
+            "Target": "Data/FarmAnimals",
+            "TargetField": [
+                "Mizu.Emu_Emu",
+                "Skins"
+            ],
+            "Entries": {
+                "Black": {
+                    "ID": "Emo",
+                    "Weight": 0.6,
+                    "Texture": "Mizu.Emu/EmoEmu",
+                    "BabyTexture": "Mizu.Emu/BabyEmoEmu"
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "$schema": "https://smapi.io/schemas/manifest.json",
+    "Name": "[CP] Emo Emu",
+    "Description": "Adds an Emo Emu skin to the emu from Mizu's Emu",
+    "Author": "TechnicalityCreations",
+    "UniqueID": "TechnicalityCreations.EmoEmu",
+    "Version": "1.0.0",
+    "UpdateKeys": ["Nexus:47237"],
+    "ContentPackFor": {
+        "MinimumVersion": "2.8.0",
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies": [
+        {
+            "UniqueID": "Mizu.Emu",
+            "IsRequired": true
+        }
+    ]
+}

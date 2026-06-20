@@ -1,7 +1,7 @@
 ﻿using ContentPatcher;
 using StardewModdingAPI;
 using StardewValley;
-using StardewValley.Internal;
+using Internal;
 using Selph.StardewMods.ExtraAnimalConfig;
 using GenericModConfigMenu;
 namespace HaySubscription
