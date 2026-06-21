@@ -25,7 +25,7 @@ namespace TechsCrossModBundles
 		{
 			Helper = helper;
 			var harmony = new Harmony(ModManifest.UniqueID);
-			harmony.Patch(AccessTools.Method(typeof(DataLoader), nameof(DataLoader.Bundles)), new HarmonyMethod(AccessTools.Method(typeof(ModEntry), nameof(LoadBundles))));
+			harmony.Patch(AccessTools.Method(typeof(DataLoader), nameof(DataLoader.Bundles)), prefix: new HarmonyMethod(AccessTools.Method(typeof(ModEntry), nameof(LoadBundles))));
 			helper.Events.GameLoop.SaveCreated += GenerateBundles;
 			helper.Events.GameLoop.Saving += SaveBundles;
 			helper.Events.GameLoop.SaveLoaded += LoadBundlesVar;
@@ -35,8 +35,13 @@ namespace TechsCrossModBundles
 		{
 			bundles = Helper.Data.ReadSaveData<Dictionary<string, string>>("TCB");
 			if (bundles == null) GenerateBundles(null);
-		}
+			else SetGame1Bundles();
 
+		}
+		static void SetGame1Bundles()
+		{
+			Game1.netWorldState.Value.SetBundleData(DataLoader.Bundles(Game1.content));
+		}
 		private void SaveBundles(object? sender, StardewModdingAPI.Events.SavingEventArgs e)
 		{
 			Helper.Data.WriteSaveData("TCB", bundles);
@@ -53,17 +58,16 @@ namespace TechsCrossModBundles
 			}
 			Console.WriteLine("Generated Bundles");
 			foreach (var l in bundles) Console.WriteLine($"\"{l.Key}\": \"{l.Value}\"");
-
+			SetGame1Bundles();
 		}
 
 		public static bool LoadBundles(LocalizedContentManager content, ref Dictionary<string, string> __result)
 		{
-			Console.WriteLine("Loading Bundles");
-			LoadBundlesVar();
-			__result = new Dictionary<string, string>(bundles);
+			if (bundles == null) return true;
+			__result = bundles != null ? new Dictionary<string, string>(bundles) : new Dictionary<string, string>(); 
 			foreach (var l in __result) Console.WriteLine($"\"{l.Key}\": \"{l.Value}\"");
 
-			return false;//__result != null;
+			return false;
 		}
 
 		public class Bundle
@@ -107,7 +111,7 @@ namespace TechsCrossModBundles
 			public BundleItem(string id, string mod = "", int count = 1, int minQuality = 0)
 			{
 				Mod = mod;
-				ID = mod + "_"+id;
+				ID = (mod==""? "":mod + "_") +id;
 				Count = count;
 				MinQuality = minQuality;
 			}
