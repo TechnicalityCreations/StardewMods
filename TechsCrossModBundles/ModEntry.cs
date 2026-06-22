@@ -12,13 +12,44 @@ namespace TechsCrossModBundles
     {
 		static Dictionary<string, string> bundles;
 		internal new static IModHelper Helper;
+		const string SVE = "FlashShifter.StardewValleyExpandedCP", RSV = "Rafseazz.RSVCP", Vapius = "Lumisteria.MtVapius", CornucopiaCrops = "Cornucopia", Sunberry = "skellady.SBVCP";
 		public readonly static Bundle[] Bundles = new Bundle[]
 		{
 			new Bundle("Crafts Room", 13, "Spring Foraging", "O 495 30", 0, -1,
 				//Anywhere Pool
-				new Pool(2, new BundleItem("16"), new BundleItem("18"), new BundleItem("20"), new BundleItem("22"), new BundleItem("Bluestar", "skellady.SBVCP"), new BundleItem("Peppercorn", "Cornucopia")),
+				new Pool(2, new BundleItem("16"), new BundleItem("18"), new BundleItem("20"), new BundleItem("22"), new BundleItem("Bluestar", Sunberry), new BundleItem("Peppercorn", CornucopiaCrops)),
 				// Location/Time Specific
-				new Pool(2, new BundleItem("399"), new BundleItem("296"), new BundleItem("Lucky_Four_Leaf_Clover", "FlashShifter.StardewValleyExpandedCP"), new BundleItem("Ridge_Cherry", "Rafseazz.RSVCP"), new BundleItem("Ridge_Azorean_Flower", "Rafseazz.RSVCP")))
+				new Pool(2, new BundleItem("399"), new BundleItem("296"), new BundleItem("Lucky_Four_Leaf_Clover", SVE), new BundleItem("Ridge_Cherry", RSV), new BundleItem("Ridge_Azorean_Flower", RSV), new BundleItem("BalmcreekCarillon", Vapius))),
+			new Bundle("Crafts Room", 14, "Summer Foraging", "O 496 30", 3, -1,
+				new Pool(3, new BundleItem("398"), new BundleItem("396"), new BundleItem("402"), new BundleItem("Ridge_Wild_Apple", RSV), new BundleItem("Marigold", Sunberry), new BundleItem("Raspberry", CornucopiaCrops))
+				),
+			new Bundle("Crafts Room", 15, "Fall Foraging", "O 497 30", 2, -1,
+				//Main
+				new Pool(1, new BundleItem("408"), new BundleItem("Mushroom_Colony", SVE), new BundleItem("Lava_Lily", RSV)),
+				// Fruit
+				new Pool(2, new BundleItem("406"), new BundleItem("410"), new BundleItem("Autumn_Drop_Berry", RSV)),
+				// Mushroom
+				new Pool(1, new BundleItem("404"))
+				),
+			new Bundle("Crafts Room", 16, "Winter Foraging", "O 498 30", 6, -1,
+				// Main
+				new Pool(2, new BundleItem("418"), new BundleItem("414"), new BundleItem("283"), new BundleItem("Sierra_Wintergreen", RSV), new BundleItem("CarmineBlossom", Sunberry), new BundleItem("JuniperBerries", CornucopiaCrops)),
+				// Tilling
+				new Pool(2, new BundleItem("412"), new BundleItem("416"), new BundleItem("Bearberrys", SVE))
+				),
+			new Bundle("Crafts Room", 17, "Construction", "BO 114 1", 4, -1,
+				new Pool(4, new BundleItem("388", count:99), new BundleItem("388", count:99), new BundleItem("390", count:99), new BundleItem("709", count:10))),
+			new Bundle("Crafts Room", 19, "Exotic Foraging", "O 235 5", 1, 5, 
+				//Desert
+				new Pool(2, new BundleItem("88"), new BundleItem("90")),
+				//Trees
+				new Pool(2, new BundleItem("724"), new BundleItem("725"), new BundleItem("726"), new BundleItem("Fir_Wax", SVE), new BundleItem("Birch_Water", SVE), new BundleItem("CinderLeaf", Sunberry), new BundleItem("ChicleRubber", CornucopiaCrops), new BundleItem("BirchSap", Vapius)),
+				//Secret Woods
+				new Pool(2, new BundleItem("257"), new BundleItem("259"), new BundleItem("Poison_Mushroom", SVE), new BundleItem("Smelly_Rafflesia")),
+				//Other
+				new Pool(2, new BundleItem("78"), new BundleItem("394"), new BundleItem("Thistle", SVE), new BundleItem("Mountain_Mistbloom", RSV))
+				)
+
 
 		};
 		public override void Entry(IModHelper helper)
