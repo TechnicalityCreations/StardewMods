@@ -189,6 +189,14 @@ namespace TechsCrossModBundles
 				AllItems = items;
 				Items = new List<BundleItem>();
 			}
+			public Pool(int chooseCount, int quality, int amount, params BundleItem[] items) : this(chooseCount, items)
+			{ 
+				foreach(BundleItem i in items)
+				{
+					i.MinQuality = quality;
+					i.Count = amount;
+				}
+			}
 			public virtual BundleItem[] Select()
 			{
 				Items = new List<BundleItem>();
