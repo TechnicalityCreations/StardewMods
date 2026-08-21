@@ -5,7 +5,7 @@
   "Description": "Items from different content mods now appear in bundles",
   "UniqueID": "TechnicalityCreations.CrossModBundles",
   "Version": "1.0.0",
-  "UpdateKeys": [ "Nexus:" ],
+  "UpdateKeys": [ "Nexus:51035" ],
   "MinimumApiVersion": "4.0.0",
   "EntryDll": "TechsCrossModBundles.dll",
   "MinimumGameVersion": "1.6"
