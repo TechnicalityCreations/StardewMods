@@ -18,7 +18,8 @@ namespace TechsCrossModBundles
 			Cornucopia = "Cornucopia",
 			ES = "EastScarp",
 			ASF = "ASF",
-			Sunberry = "skellady.SBVCP";
+			Sunberry = "skellady.SBVCP",
+			Alchemistry = "Morghoula.AlchemistryCP";
 		public override void Entry(IModHelper helper)
 		{
 			Helper = helper;
