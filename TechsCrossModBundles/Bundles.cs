@@ -25,7 +25,9 @@ namespace TechsCrossModBundles
 					new BundleItem("Lucky_Four_Leaf_Clover", SVE),
 					new BundleItem("Ridge_Cherry", RSV),
 					new BundleItem("Ridge_Azorean_Flower", RSV),
-					new BundleItem("BalmcreekCarillon", Vapius)
+					new BundleItem("BalmcreekCarillon", Vapius),
+					new BundleItem("MoonBerry", Alchemistry),
+					new BundleItem("SunriseGlory", Alchemistry)
 				)
 			),
 			new Bundle("Crafts Room", 14, "Summer Foraging", "O 496 30", 3, -1,
@@ -35,7 +37,8 @@ namespace TechsCrossModBundles
 					new BundleItem("402"), // Sweet Pea
 					new BundleItem("Ridge_Wild_Apple", RSV),
 					new BundleItem("Marigold", Sunberry),
-					new BundleItem("Raspberry", Cornucopia)
+					new BundleItem("Raspberry", Cornucopia),
+					new BundleItem("FalseMorel", Alchemistry)
 				)
 			),
 			new Bundle("Crafts Room", 15, "Fall Foraging", "O 497 30", 2, -1,
@@ -50,7 +53,10 @@ namespace TechsCrossModBundles
 					new BundleItem("Autumn_Drop_Berry", RSV)
 				),
 				new Pool(1,
-					new BundleItem("404") // Common Mushroom
+					new BundleItem("404"), // Common Mushroom
+					new BundleItem("MeteorCap", Alchemistry),
+					new BundleItem("HellfireBolete", Alchemistry)
+
 				)
 			),
 			new Bundle("Crafts Room", 16, "Winter Foraging", "O 498 30", 6, -1,
@@ -60,7 +66,9 @@ namespace TechsCrossModBundles
 					new BundleItem("283"), // Holly
 					new BundleItem("Sierra_Wintergreen", RSV),
 					new BundleItem("CarmineBlossom", Sunberry),
-					new BundleItem("JuniperBerries", Cornucopia)
+					new BundleItem("JuniperBerries", Cornucopia),
+					new BundleItem("FairieWings", Alchemistry),
+					new BundleItem("DawnsingerToadstool", Alchemistry)
 				),
 				new Pool(2,
 					new BundleItem("412"), // Winter Root
@@ -87,13 +95,15 @@ namespace TechsCrossModBundles
 					new BundleItem("257"), // Morel
 					new BundleItem("259"), // Fiddlehead Fern
 					new BundleItem("Poison_Mushroom", SVE),
-					new BundleItem("Smelly_Rafflesia", SVE)
+					new BundleItem("Smelly_Rafflesia", SVE),
+					new BundleItem("ForestWisp", Alchemistry)
 				),
 				new Pool(2,
 					new BundleItem("78"), // Cave Carrot
 					new BundleItem("394"), // Rainbow Shell
 					new BundleItem("Thistle", SVE),
-					new BundleItem("Mountain_Mistbloom", RSV)
+					new BundleItem("Mountain_Mistbloom", RSV),
+					new BundleItem("BeachedOyster", Alchemistry)
 				)
 			),
 
@@ -111,7 +121,8 @@ namespace TechsCrossModBundles
 					new BundleItem("Buckwheat", Cornucopia),
 					new BundleItem("Cabbage", Cornucopia),
 					new BundleItem("Onion", Cornucopia),
-					new BundleItem("Spinach", Cornucopia)
+					new BundleItem("Spinach", Cornucopia),
+					new BundleItem("Hemlock", Alchemistry)
 				)
 			),
 			new Bundle("Pantry", 1, "Summer Crops", "O 621 1", 3, -1,
@@ -127,7 +138,9 @@ namespace TechsCrossModBundles
 					new BundleItem("Honeydew", Cornucopia),
 					new BundleItem("GreenPeas", Cornucopia),
 					new BundleItem("Watermelon", Cornucopia),
-					new BundleItem("Chickpea", Cornucopia)
+					new BundleItem("Chickpea", Cornucopia),
+					new BundleItem("StarlightHellebore", Alchemistry),
+					new BundleItem("WerewolfsBane", Alchemistry)
 				)
 			),
 			new Bundle("Pantry", 2, "Fall Crops", "BO 10 1", 2, -1,
@@ -144,7 +157,9 @@ namespace TechsCrossModBundles
 					new BundleItem("Celery", Cornucopia),
 					new BundleItem("Lentils", Cornucopia),
 					new BundleItem("Oats", Cornucopia),
-					new BundleItem("Turnip", Cornucopia)
+					new BundleItem("Turnip", Cornucopia),
+					new BundleItem("SunsetCastor", Alchemistry),
+					new BundleItem("BansheesBell", Alchemistry)
 				)
 			),
 			new Bundle("Pantry", 3, "Quality Crops", "BO 15 1", 6, 3,
@@ -162,7 +177,8 @@ namespace TechsCrossModBundles
 					new BundleItem("Buckwheat", Cornucopia),
 					new BundleItem("Cabbage", Cornucopia),
 					new BundleItem("Onion", Cornucopia),
-					new BundleItem("Spinach", Cornucopia)
+					new BundleItem("Spinach", Cornucopia),
+					new BundleItem("Hemlock", Alchemistry)
 				),
 				//Summer
 				new Pool(1, 2, 5,
@@ -177,7 +193,9 @@ namespace TechsCrossModBundles
 					new BundleItem("Honeydew", Cornucopia),
 					new BundleItem("GreenPeas", Cornucopia),
 					new BundleItem("Watermelon", Cornucopia),
-					new BundleItem("Chickpea", Cornucopia)
+					new BundleItem("Chickpea", Cornucopia),
+					new BundleItem("StarlightHellebore", Alchemistry),
+					new BundleItem("WerewolfsBane", Alchemistry)
 				),
 				//Fall
 				new Pool(1, 2, 5,
@@ -193,7 +211,9 @@ namespace TechsCrossModBundles
 					new BundleItem("Celery", Cornucopia),
 					new BundleItem("Lentils", Cornucopia),
 					new BundleItem("Oats", Cornucopia),
-					new BundleItem("Turnip", Cornucopia)
+					new BundleItem("Turnip", Cornucopia),
+					new BundleItem("SunsetCastor", Alchemistry),
+					new BundleItem("BansheesBell", Alchemistry)
 				)
 			),
 			new Bundle("Pantry", 4, "Animal", "BO 12 1", 4, 5,
@@ -298,7 +318,8 @@ namespace TechsCrossModBundles
 					new BundleItem("701"), // Tilapia
 					new BundleItem("Starfish", SVE),
 					new BundleItem("SeaTurtle", ASF),
-					new BundleItem("Marlin", ASF)
+					new BundleItem("Marlin", ASF),
+					new BundleItem("VampireAnemone", Alchemistry)
 				)
 			),
 			new Bundle("Fish Tank", 9, "Night Fishing", "R 516 1", 1, -1,
@@ -308,7 +329,8 @@ namespace TechsCrossModBundles
 					new BundleItem("148"), // Eel
 					new BundleItem("269"), // Midnight Carp
 					new BundleItem("Slime_Barbel", ES),
-					new BundleItem("FiretailGuppy", Sunberry)
+					new BundleItem("FiretailGuppy", Sunberry),
+					new BundleItem("MoonlightJellyfish", Alchemistry)
 				)
 			),
 			new Bundle("Fish Tank", 10, "Specialty Fishing", "O 242 5", 4, -1,
@@ -357,7 +379,8 @@ namespace TechsCrossModBundles
 					new BundleItem("420"), // Red Mushroom
 					new BundleItem("Sweet_Potato", SVE),
 					new BundleItem("Paneeki", ES),
-					new BundleItem("Geranium", Cornucopia)
+					new BundleItem("Geranium", Cornucopia),
+					new BundleItem("DragonRoot", Alchemistry)
 					),
 				new Pool(1,
 					new BundleItem("396"), // Spice Berry
