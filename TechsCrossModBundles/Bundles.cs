@@ -17,7 +17,8 @@ namespace TechsCrossModBundles
 					new BundleItem("20"), // Leek
 					new BundleItem("22"), // Dandelion
 					new BundleItem("Bluestar", Sunberry),
-					new BundleItem("Peppercorn", Cornucopia)
+					new BundleItem("Peppercorn", Cornucopia),
+					new BundleItem("Cherry_Blossoms", WAG)
 				),
 				new Pool(2,
 					new BundleItem("399"), // Spring Onion
@@ -268,7 +269,12 @@ namespace TechsCrossModBundles
 					new BundleItem("Grapefruit", Cornucopia),
 					new BundleItem("Pomelo", Cornucopia),
 					new BundleItem("Fig", Cornucopia),
-					new BundleItem("Yuzu", Cornucopia)
+					new BundleItem("Yuzu", Cornucopia),
+					new BundleItem("Pistachio", WAG),
+					new BundleItem("Elderberries", WAG),
+					new BundleItem("Cashew", WAG),
+					new BundleItem("Lemon", WAG),
+					new BundleItem("Lime", WAG)
 					),
 				new Pool(3,
 					new BundleItem("344"), // Jelly
@@ -362,7 +368,9 @@ namespace TechsCrossModBundles
 					new BundleItem("Gold_Carrot", SVE),
 					new BundleItem("Chives", Cornucopia),
 					new BundleItem("Parsley", Cornucopia),
-					new BundleItem("Olive", Vapius)
+					new BundleItem("Olive", Vapius),
+					new BundleItem("Cranberry_Chutney", WAG),
+					new BundleItem("Mixed_Berry_Preserves", WAG)
 				),
 				new Pool(2,
 					new BundleItem("194"), // Fried Egg
@@ -407,7 +415,8 @@ namespace TechsCrossModBundles
 					new BundleItem("ZinfazuFruit", ES),
 					new BundleItem("Sunberries", Sunberry),
 					new BundleItem("Clematis", Cornucopia),
-					new BundleItem("PinkMorningGlory", Vapius)
+					new BundleItem("PinkMorningGlory", Vapius),
+					new BundleItem("Lavender", WAG)
 					)
 			),
 			new Bundle("Bulletin Board", 32, "Field Research", "BO 20 1", 5, -1,
@@ -418,7 +427,8 @@ namespace TechsCrossModBundles
 					new BundleItem("Amber", SVE),
 					new BundleItem("Violet_Devil_s_Claw", RSV),
 					new BundleItem("ChickenoftheWoods", Cornucopia),
-					new BundleItem("WoodSilkFlower", Vapius)
+					new BundleItem("WoodSilkFlower", Vapius),
+					new BundleItem("Meringue_Mushroom", WAG)
 				),
 				new Pool(1,
 					new BundleItem("702"), // Chub
